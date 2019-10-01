@@ -9,6 +9,8 @@
     padding-top: 100px;
     padding-bottom: 120px;
     border-bottom: 1px solid fade(@grey, 30%);
+    background: url("../images/symbols.png") right bottom no-repeat;
+    position: relative;
 }
 
 .intro__content {
@@ -31,9 +33,13 @@
 .intro__text {
     font-size: 1.2rem;
     color: fade(@black, 70%);
+    margin-bottom: 25px;
 
 }
 
 .intro__photo {
-    widows: 50%;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    z-index: 1;
 }
