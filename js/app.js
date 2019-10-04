@@ -42,6 +42,7 @@ $(function () {
                 transform: "rotateX(0)"
             });
         }, 200);
+        workSlider.slick('setPosition');
     });
 
     modalClose.on("click", function (event) {
@@ -72,6 +73,46 @@ $(function () {
 
     $(".modal__dialog").on("click", function (event) {
         event.stopPropagation();
+    });
+
+    const workSlider = $('[data-slider="slick"]');
+
+    // Slider: https://kenwheeler.github.io/slick/
+
+    workSlider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: true
+    });
+
+    $(".slickPrev").on("click", function (event) {
+        event.preventDefault();
+
+        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+
+        currentSlider.slick("slickPrev");
+    });
+
+    $(".slickNext").on("click", function (event) {
+        event.preventDefault();
+
+        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+
+        currentSlider.slick("slickNext");
+    });
+
+    // Mobile nav
+
+    const navToggle = $("#navToggle");
+    const nav = $("#nav");
+
+    navToggle.on("click", function(event) {
+        event.preventDefault();
+
+        nav.toggleClass("show");
     });
 
 });
