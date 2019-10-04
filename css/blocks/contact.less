@@ -3,11 +3,20 @@
 .contact {
     display: flex;
     background: url(https://placehold.it/477X700) right center no-repeat;
+
+    @media @tablet {
+        background: url(https://placehold.it/460X700) right center no-repeat;
+ 
+    }
 }
 
 .contact__left {
     width: 47%;
     padding: 2rem;
+
+    @media @tablet {
+        width: 43%;
+    }
 }
 
 .contact__info {

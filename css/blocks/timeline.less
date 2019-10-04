@@ -26,10 +26,18 @@
     &--left {
         text-align: right;
         padding-right: 3.2rem;
+
+        @media @mobile {
+            padding-right: 1.2rem;
+        }
     }
 
     &--right {
         padding-left: 3.2rem;
+
+        @media @mobile {
+            padding-left: 1.2rem;
+        }
     }
 }
 
@@ -39,6 +47,10 @@
     color: @black;
     text-transform: uppercase;
     font-weight: 700;
+
+    @media @mobile {
+        margin-bottom: 1.6rem;
+    }
 }
 
 .timeline__item {
