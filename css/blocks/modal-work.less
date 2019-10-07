@@ -8,6 +8,10 @@
     width: 65%;
     position: relative;
     overflow: hidden;
+
+    @media @mobile {
+        display: none;
+    }
 }
 
 .modal-work__photo {
@@ -31,6 +35,10 @@
 
     @media @tablet {
         padding: 4.4rem 1rem 1.73rem;
+    }
+
+    @media @mobile {
+        width: 100%;
     }
 }
 
@@ -95,6 +103,10 @@
     z-index: 1;
     width: 100%;
     padding: 0 1.8rem 1rem;
+
+    @media @mobile {
+        display: none;
+    }
 }
 
 .modal-work__btn {
